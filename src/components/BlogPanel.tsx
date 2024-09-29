@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 import { useReducer } from "react";
 import Link from "next/link";
 import BlogCard from "./BlogCard";
@@ -6,7 +7,6 @@ import useFetch from "@/hooks/useFetch";
 
 export default function BlogPanel() {
 
-    console.log('BlogsPage')
     const mockBlogRepo = [
         {
             'bid':'001',
@@ -41,9 +41,11 @@ export default function BlogPanel() {
         <div className='grid lg:grid-cols-3 gap-8 text-black pt-[120px] pb-[20px]'>
              {
                  mockBlogRepo.map((blogItem)=>(
-                    <Link href={`/learn/${blogItem.bid}`} className='w-full'>
-                        <BlogCard blogName={blogItem.blogName} imgSrc={blogItem.imgSrc} desc={blogItem.desc}/>
-                    </Link>
+                    <React.Fragment key={blogItem.bid}>
+                        <Link href={`/learn/${blogItem.bid}`} className='w-full'>
+                            <BlogCard blogName={blogItem.blogName} imgSrc={blogItem.imgSrc} desc={blogItem.desc}/>
+                        </Link>
+                    </React.Fragment>
                 ))
              }
         </div>
