@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  li {
+    @apply p-4
+  }
+  
+  button {
+    @apply text-white border bg-indigo-600 border-indigo-600 hover:bg-transparent hover:text-indigo-600 rounded-md
+  }
+
+  ui {
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 247, 180, 80;
