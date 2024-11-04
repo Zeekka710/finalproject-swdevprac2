@@ -12,10 +12,10 @@ export default function TopMenu() {
     return (
         <div className='w-screen h-[80px] z-30 bg-white fixed drop-shadow-lg flex items-center'>
             <div className='px-[190px]'>
-                    <TopMenuItem title='Document' pageRef='/document'/>
+                    <TopMenuItem title='Document' pageRef='https://igniteilab.wixsite.com/launchx'/>
                     <TopMenuItem title='Learn' pageRef='/learn'/>
-                    <TopMenuItem title='Team' pageRef='/team'/>
-                    <TopMenuItem title='Gallery' pageRef='/gallery'/>
+                    <TopMenuItem title='Team' pageRef='https://igniteilab.wixsite.com/launchx/team'/>
+                    <TopMenuItem title='Gallery' pageRef='https://www.facebook.com/CMICe.LaunchX'/>
             </div>
             <div className='flex px-[40px] items-center'>
                 <a href='/' rel="noopener noreferrer" >
