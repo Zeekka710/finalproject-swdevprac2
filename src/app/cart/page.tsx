@@ -29,7 +29,7 @@ export default async function Booking() {
 
         return (
             <main className="text-center min-h-screen items-center justify-between overflow-hidden" style={bg}>
-                <h1 className="mt-[100px] text-xl font-medium">Your Bookings</h1>
+                <h1 className="mt-[100px] text-xl font-medium">Your Booking</h1>
                 <Suspense fallback={<p>:Loading ... <LinearProgress /></p>}>
                     <BookingCart shopJson={shopJson.data} token={userToken} />
                 </Suspense>
@@ -40,3 +40,5 @@ export default async function Booking() {
         return <p>Failed to load bookings. Please try again later.</p>;
     }
 }
+
+export const dynamic = "force-dynamic"; // Ensure the route is dynamically rendered
