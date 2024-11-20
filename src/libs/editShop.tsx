@@ -1,6 +1,6 @@
 export default async function editShop(id: string, token: string, updatedData: object) {
     try {
-        const response = await fetch(`http://localhost:5001/api/v1/shops/${id}`, {
+        const response = await fetch(`/api/v1/shops/${id}`, {
             method: "PUT", // Correct HTTP method for updating resources
             headers: {
                 "Content-Type": "application/json", // Ensure JSON format

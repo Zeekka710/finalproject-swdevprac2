@@ -2,7 +2,7 @@ export default async function deleteShop(id: string, token: string) {
 
     await new Promise( (resolve)=>setTimeout(resolve, 5000) )
 
-    const response = await fetch(`http://localhost:5001/api/v1/shops/${id}`, {
+    const response = await fetch(`/api/v1/shops/${id}`, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${token}`,
