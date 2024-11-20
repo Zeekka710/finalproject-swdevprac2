@@ -45,3 +45,5 @@ export const authOptions:AuthOptions = {
       }
     }
 }
+
+export const dynamic = "force-dynamic"; // Ensure the route is dynamically rendered

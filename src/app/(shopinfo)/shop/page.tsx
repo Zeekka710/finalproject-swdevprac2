@@ -30,3 +30,5 @@ export default async function Shop() {
     </main>
   );
 }
+
+export const dynamic = "force-dynamic"; // Ensure the route is dynamically rendered
