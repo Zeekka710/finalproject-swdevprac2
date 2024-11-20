@@ -3,16 +3,11 @@ import Image from 'next/image'
 
 export default function Banner() {
     return (
-        <div className={styles.banner}>
-            <Image src={'/img/cover.jpg'}
-            alt='cover'
-            fill={true}
-            priority
-            objectFit='cover'/>
-            <div className={styles.bannerText}>
-                <h1 className='text-4xl font-medium'>Your Travel Partner</h1>
-                <h3 className='text-xl font-serif'>Explore Your World with Us</h3>
-            </div>
-        </div>    
+        <div>
+            <div className="w-[661px] h-[191px]"></div>
+                <span className="text-[#8a4040] text-[64px] font-bold font-Inter leading-[96px]">Escape the stress, Embrace </span>
+                <span className="text-[#8a4040] text-[64px] font-bold font-Inter leading-[96px]">the calm.</span>
+            <Image className="w-auto h-auto rounded-[30px]" src="/img/course/body.png"  alt="Massage-1" width={0} height={0}/>
+        </div> 
     );
 }

@@ -1,27 +1,31 @@
-'use client'
+'use client';
 
 import React from 'react';
 
-export default function InteractiveCard({children} : { children: React.ReactNode}) {
-
-    function onCardMouseAction(event: React.SyntheticEvent)
-    {
-        if(event.type=='mouseover')
-        {
-            event.currentTarget.classList.remove('shadow-lg')
-            event.currentTarget.classList.add('shadow-2xl')
-        }
-        else {
-            event.currentTarget.classList.remove('shadow-2xl')
-                event.currentTarget.classList.add('shadow-lg')
-        }
+export default function InteractiveCard({
+  children,
+  contentName,
+}: {
+  children: React.ReactNode;
+  contentName: string;
+}) {
+  function onCardMouseAction(event: React.SyntheticEvent) {
+    if (event.type === 'mouseover') {
+      event.currentTarget.classList.add('shadow-2xl');
+    } else {
+      event.currentTarget.classList.remove('shadow-2xl');
     }
+  }
 
-    return (
-        <div className='w-[400px] h-[300px] rounded-lg shadow-lg mx-[30px]'
-        onMouseOver={(e)=>onCardMouseAction(e)}
-        onMouseOut={(e)=>onCardMouseAction(e)}>
-            {children}
-        </div>    
-    );
+  return (
+    <div
+      className="w-full max-w-sm h-auto rounded-lg overflow-hidden transition-shadow duration-300"
+      role="button"
+      aria-label={`Interactive card for ${contentName}`}
+      onMouseOver={(e) => onCardMouseAction(e)}
+      onMouseOut={(e) => onCardMouseAction(e)}
+    >
+      {children}
+    </div>
+  );
 }
