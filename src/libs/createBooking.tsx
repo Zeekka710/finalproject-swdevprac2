@@ -2,7 +2,7 @@ export default async function createBooking(id: string, token: string) {
 
     await new Promise( (resolve)=>setTimeout(resolve, 5000) )
 
-    const response = await fetch(`/api/v1/${id}/bookings}`, {
+    const response = await fetch(`https://finalproject-beckend-swdevprac2.vercel.app/api/v1/${id}/bookings}`, {
         method: "POST",
         headers: {
             authorization: `Bearer ${token}`,

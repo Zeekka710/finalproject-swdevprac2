@@ -1,5 +1,5 @@
 export default async function getShop(id: string) {
-    const response = await fetch(`/api/v1/shops/${id}`, {
+    const response = await fetch(`https://finalproject-beckend-swdevprac2.vercel.app/api/v1/shops/${id}`, {
       cache: "no-store", // Avoid caching for dynamic updates
     });
   

@@ -1,6 +1,6 @@
 export default async function editBooking(id: string, token: string, updatedData: object) {
     try {
-        const response = await fetch(`/api/v1/bookings/${id}`, {
+        const response = await fetch(`https://finalproject-beckend-swdevprac2.vercel.app/api/v1/bookings/${id}`, {
             method: "PUT", // Correct HTTP method for updating resources
             headers: {
                 "Content-Type": "application/json", // Ensure JSON format

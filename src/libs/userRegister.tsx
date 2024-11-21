@@ -2,7 +2,7 @@ export default async function userRegister(userName:string, userEmail:string, us
 
     const date = new Date();
 
-    const response = await fetch("/api/v1/auth/register", {
+    const response = await fetch("https://finalproject-beckend-swdevprac2.vercel.app/api/v1/auth/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

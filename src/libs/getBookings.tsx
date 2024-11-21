@@ -2,7 +2,7 @@ export default async function getBookings(token: string) {
     try {
         console.log("Fetching bookings with token:", token);
 
-        const response = await fetch("/api/v1/bookings", {
+        const response = await fetch("https://finalproject-beckend-swdevprac2.vercel.app/api/v1/bookings", {
             method: "GET",
             headers: {
                 authorization: `Bearer ${token}`,
